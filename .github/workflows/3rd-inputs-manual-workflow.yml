@@ -10,12 +10,26 @@ on:
         description: 'Age'  # while run workflow it will show as box
         type: number
         required: true   # without this value workflow will not run
+      married:
+        description: 'Is Married'  # while run workflow it will show as box
+        type: boolean
+        required: true   # without this value workflow will not run
+      gender:
+        description: 'Gender'  # while run workflow it will show as box
+        type: choice
+        options:
+          - Male
+          - Female
 jobs:
   manual-workflow:    # it will show in action tabe as workflow name
     runs-on: ubuntu-latest   # it means will run on ubuntu os
     steps:
-      - name: Name
+      - name: Name   # First Step
         #run: echo "Hello Github Actions 3rd input manual workflow!"
         run: echo "Hello " "${{inputs.name}}" # will read dynamic name value or will print default value
-      - name: Age
+      - name: Age    # 2nd Step
         run: echo "${{inputs.age}}" # will read dynamic age value which is mandetory field
+      - name: Merried   # 3rd Step
+        run: echo "${{inputs.married}}" # will read married value as true or false
+      - name: Gender   # 4rt Step
+        run: echo "${{inputs.gender}}" # will read gender value based on choice
