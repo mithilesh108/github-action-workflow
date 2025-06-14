@@ -16,7 +16,7 @@ on:
       gender:
         description: 'Gender'  # while run workflow it will show as box
         type: choice
-        default: Transgender
+        default: Female
         options:
           - Male
           - Female
