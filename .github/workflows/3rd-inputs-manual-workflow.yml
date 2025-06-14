@@ -3,12 +3,19 @@ on:
   workflow_dispatch:  # it means this job need to run manually
     inputs:
       name:
-        description: 'Name'
+        description: 'Name'  # while run workflow it will show as box to change defaut value
         type: string
         default: 'test'
+      age:
+        description: 'Age'  # while run workflow it will show as box
+        type: number
+        required: true   # without this value workflow will not run
 jobs:
   manual-workflow:    # it will show in action tabe as workflow name
     runs-on: ubuntu-latest   # it means will run on ubuntu os
     steps:
-      - name: Greetings
-        run: echo "Hello Github Actions 3rd input manual workflow! " "${{inputs.name}}"
+      - name: Name
+        #run: echo "Hello Github Actions 3rd input manual workflow!"
+        run: echo "Hello " "${{inputs.name}}" # will read dynamic name value or will print default value
+      - name: Age
+        run: "${{inputs.age}}"
