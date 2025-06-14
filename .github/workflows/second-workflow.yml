@@ -1,11 +1,9 @@
-name: Greetings workflow_dispatch
+name: Manual workflow
 on:
-  workflow_dispatch:
-    input:
-      name: env
+  workflow_dispatch:  # it means this job need to run manually
 jobs:
-  demo:
+  manual-workflow:
     runs-on: ubuntu-latest
     steps:
       - name: Greetings
-        run: echo "Hello Github Actions!"
+        run: echo "Hello Github Actions manual workflow!"
