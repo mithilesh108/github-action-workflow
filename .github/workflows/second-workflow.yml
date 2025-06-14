@@ -1,9 +1,9 @@
-name: Greetings manual workflow
+name: Greetings manual workflow  # name of the workflow. Its optional
 on:
   workflow_dispatch:  # it means this job need to run manually
 jobs:
-  manual-workflow:
-    runs-on: ubuntu-latest
+  manual-workflow:    # it will show in action tabe as workflow name
+    runs-on: ubuntu-latest   # it means will run on ubuntu os
     steps:
       - name: Greetings
         run: echo "Hello Github Actions manual workflow!"
