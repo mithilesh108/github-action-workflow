@@ -1,7 +1,7 @@
 name: Greetings push workflow
 on:
   push:
-    branches: [main]
+    branches: [master]
 jobs:
   hello-world:
     runs-on: ubuntu-latest
