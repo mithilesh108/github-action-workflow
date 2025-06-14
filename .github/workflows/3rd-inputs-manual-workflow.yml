@@ -18,4 +18,4 @@ jobs:
         #run: echo "Hello Github Actions 3rd input manual workflow!"
         run: echo "Hello " "${{inputs.name}}" # will read dynamic name value or will print default value
       - name: Age
-        run: "${{inputs.age}}"
+        run: echo "${{inputs.age}}" # will read dynamic age value which is mandetory field
