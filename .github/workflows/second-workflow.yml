@@ -1,4 +1,4 @@
-name: Manual workflow
+name: Greetings manual workflow
 on:
   workflow_dispatch:  # it means this job need to run manually
 jobs:
