@@ -1,4 +1,4 @@
-name: Greetings workflow
+name: Greetings push
 on:
   push:
     branches: [main]
