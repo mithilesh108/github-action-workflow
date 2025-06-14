@@ -1,7 +1,8 @@
 name: Greetings workflow_dispatch
 on:
   workflow_dispatch:
-    branches: [main]
+    input:
+      name: env
 jobs:
   demo:
     runs-on: ubuntu-latest
