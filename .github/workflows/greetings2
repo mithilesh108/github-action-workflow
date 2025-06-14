@@ -1,0 +1,10 @@
+name: Greetings workflow_dispatch
+on:
+  workflow_dispatch:
+    branches: [main]
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greetings
+        run: echo "Hello Github Actions!"
