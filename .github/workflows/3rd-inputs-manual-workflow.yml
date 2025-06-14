@@ -13,10 +13,10 @@ on:
       married:
         description: 'Is Married'  # while run workflow it will show as box
         type: boolean
-        required: true   # without this value workflow will not run
       gender:
         description: 'Gender'  # while run workflow it will show as box
         type: choice
+        default: Transgender
         options:
           - Male
           - Female
