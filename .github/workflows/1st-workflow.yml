@@ -1,4 +1,4 @@
-name: Greetings push workflow
+name: 1st push workflow
 on:
   push:
     branches: [master]
