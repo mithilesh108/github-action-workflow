@@ -1,10 +1,10 @@
-name: Continuous Integration   # Name of the workflow. Its optional.
+name: Greetings workflow
 on:
   push:
-    branchs: [main]
+    branches: [main]
 jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
-      -name: Greetings
-       run: echo "Hello Github Actions!"
+      - name: Greetings
+        run: echo "Hello Github Actions!"
