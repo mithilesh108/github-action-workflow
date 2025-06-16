@@ -1,4 +1,4 @@
-name: Schedule workflow  # name of the workflow. Its optional
+name: 4th schedule workflow  # name of the workflow. Its optional
 on:
   schedule:
     - cron: '*/1 * * * *'
