@@ -13,6 +13,14 @@ on:
       married:
         description: 'Is Married'  # while run workflow it will show as box
         type: boolean
+      env:
+        description: 'Enviroment'  # while run workflow it will show as box
+        type: choice
+        options:
+          - dev
+          - test
+          - release
+          - prod
       gender:
         description: 'Gender'  # while run workflow it will show as box
         type: choice
@@ -24,6 +32,7 @@ jobs:
   manual-workflow:    # it will show in action tabe as workflow name
     name: Fedex workflow  # it will override manual-workflow name and show in action tabe as Fedex workflow
     runs-on: ubuntu-latest   # it means will run on ubuntu os
+    environment: ${{inputs.env}}
     steps:
       - uses: actions/checkout@v4 # wil checkout the repo
       # - uses: Fedex/eai-3538069-encrypt/encrypt@v1 # wil checkout the repo
@@ -36,3 +45,5 @@ jobs:
         run: echo "${{inputs.married}}" # will read married value as true or false
       - name: Gender   # 4rt Step
         run: echo "${{inputs.gender}}" # will read gender value based on choice
+      - name: Environment   # 4rt Step
+        run: echo ${environment} # will read gender value based on choice
