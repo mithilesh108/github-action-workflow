@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Execution log time
         run: |
-          current_date_time=$(date)
-          echo 'Current Date and Time: $current_date_time'
+         # current_date_time=$(date)
+          echo "Current Date and Time: $(date)"
