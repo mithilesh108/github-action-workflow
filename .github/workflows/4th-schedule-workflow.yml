@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest   # it means will run on ubuntu os
     steps:
       - name: Execution log time
-        run:
+        run: |
           current_date_time=$(date)
-          echo "Current Date and Time : $current_date_time"
+          echo 'Current Date and Time: $current_date_time'
