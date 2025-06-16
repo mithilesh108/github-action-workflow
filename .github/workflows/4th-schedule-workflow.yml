@@ -1,0 +1,13 @@
+name: Greetings manual workflow  # name of the workflow. Its optional
+on:
+  schedule:
+    - cron: '30 5 * * 1,3'
+    - cron: '30 5 * * 1,3'
+jobs:
+  schedule-demo:    # it will show in action tabe as workflow name
+    runs-on: ubuntu-latest   # it means will run on ubuntu os
+    steps:
+      - name: Execution log time
+        run:
+          current_date_time=$(date)
+          echo "Current Date and Time : $current_date_time"
