@@ -48,4 +48,4 @@ jobs:
       - name: Environment   # 4rt Step
         run: |
           environmentRun=${{inputs.env}}
-          echo "Current environment is: ${environment}"
+          echo "Current environment is: ${environmentRun}"
