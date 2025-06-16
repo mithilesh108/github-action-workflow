@@ -47,5 +47,5 @@ jobs:
         run: echo "${{inputs.gender}}" # will read gender value based on choice
       - name: Environment   # 4rt Step
         run: |
-          environment=${{inputs.env}}
+          environmentRun=${{inputs.env}}
           echo "Current environment is: ${environment}"
