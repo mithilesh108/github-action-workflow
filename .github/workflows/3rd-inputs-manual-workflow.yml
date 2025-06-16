@@ -22,7 +22,7 @@ on:
           - Female
 jobs:
   manual-workflow:    # it will show in action tabe as workflow name
-    name: Fedex workflow
+    name: Fedex workflow  # it will override manual-workflow name and show in action tabe as Fedex workflow
     runs-on: ubuntu-latest   # it means will run on ubuntu os
     steps:
       - uses: actions/checkout@v4 # wil checkout the repo
