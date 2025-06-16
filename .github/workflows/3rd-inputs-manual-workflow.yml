@@ -22,8 +22,11 @@ on:
           - Female
 jobs:
   manual-workflow:    # it will show in action tabe as workflow name
+    name: Fedex workflow
     runs-on: ubuntu-latest   # it means will run on ubuntu os
     steps:
+      - uses: actions/checkout@v4 # wil checkout the repo
+      # - uses: Fedex/eai-3538069-encrypt/encrypt@v1 # wil checkout the repo
       - name: Name   # First Step
         #run: echo "Hello Github Actions 3rd input manual workflow!"
         run: echo "Hello " "${{inputs.name}}" # will read dynamic name value or will print default value
