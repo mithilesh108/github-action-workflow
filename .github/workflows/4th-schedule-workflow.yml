@@ -1,7 +1,8 @@
 name: 4th schedule workflow  # name of the workflow. Its optional
 on:
-  schedule:
-    - cron: '*/1 * * * *'
+  workflow_dispatch:  # first time need to run manually
+  # schedule:
+  #   - cron: '*/1 * * * *'
     #- cron: '30 5 * * 1,3'
 jobs:
   schedule-demo:    # it will show in action tabe as workflow name
